@@ -1,0 +1,255 @@
+.projects {
+  padding-top: 68px;
+  margin-bottom: 68px;
+
+  .label {
+    top: 7px;
+    right: 7px;
+    padding: 6px 14px;
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 12px;
+    color: #202020;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+
+    &-small {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #202020;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    &-big {
+      margin: 0;
+      margin-bottom: 6px;
+      color: #FFF;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    &-mid {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #202020;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+
+  &__date {
+    padding-left: 18px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    background-repeat: no-repeat;
+    background-position: center left;
+
+    &-small {
+      background-image: url('../img/calendar-grey.svg');
+      color: #999;
+      background-position: left center;
+    }
+
+    &-big {
+      margin-bottom: 2px;
+      background-image: url('../img/calendar-white.svg');
+      color: #fff;
+      background-position: left center;
+    }
+
+    &-mid {
+      background-image: url('../img/calendar-grey.svg');
+      color: #999;
+      background-position: left center;
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+    height: fit-content;
+    align-self: end;
+    border: 3px solid #FF6E30;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out,
+      border 0.3s ease-in-out;
+
+    &:focus {
+      border: 3px solid #FF6E30;
+      background: #BC572B;
+    }
+
+    &:hover {
+      border: 3px solid #FF6E30;
+      background: #FF6E30;
+    }
+
+    &:active {
+      border: 3px solid #CE4307;
+      background: #CE4307;
+    }
+  }
+
+  &__cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    gap: 30px;
+  }
+
+  &__bkg {
+
+    &-small {
+      padding-top: 97%;
+      margin-bottom: 18px;
+    }
+
+    &-mid {
+      padding-top: 61.4%;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__card {
+    position: relative;
+  }
+
+  &__card {
+
+    &-small {
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        .projects__bkg-small {
+          background-image: url('../img/landscape.jpg');
+          background-size: cover;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+
+        .projects__bkg-small {
+          background-image: url('../img/portrait.jpg');
+          background-size: cover;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(3) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+
+        .hide-text {
+          display: none;
+        }
+
+        .projects__bkg-small {
+          background-image: url('../img/object.jpg');
+          background-size: cover;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+
+    }
+
+    &-big {
+      display: grid;
+      grid-template-rows: repeat(3, max-content) 1fr;
+      padding: 30px;
+      padding-right: 308px;
+      padding-top: 22px;
+
+      &:nth-child(4) {
+        background-image: url('../img/semantic.jpg');
+        background-size: cover;
+        grid-column-start: 7;
+        grid-column-end: 13;
+      }
+
+      &:nth-child(5) {
+        background-image: url('../img/oblivion.jpg');
+        background-size: cover;
+        grid-column-start: 1;
+        grid-column-end: 7;
+      }
+    }
+
+    &-mid {
+
+      &:nth-child(6) {
+        grid-column-start: 7;
+        grid-column-end: 10;
+
+        .projects__bkg-mid {
+          background-image: url('../img/retouch.jpg');
+          background-size: cover;
+        }
+      }
+
+      &:nth-child(7) {
+        grid-column-start: 10;
+        grid-column-end: 13;
+
+        .projects__bkg-mid {
+          background-image: url('../img/portrait-2.jpg');
+          background-size: cover;
+        }
+      }
+
+    }
+  }
+
+  &__link {
+
+    transition: background 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:focus {
+      background: #FFD4C1;
+    }
+
+    &:hover {
+      color: #FF6E30;
+    }
+
+    &:active {
+      background: transparent;
+      color: #CE4307;
+    }
+  }
+}
